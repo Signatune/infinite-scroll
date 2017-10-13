@@ -45,13 +45,11 @@ $(document).ready(function () {
 
   .done(function( json ) {
     $.each(json.news, function( index, value) {
-      $.each(json.news, function( index, value) {
-            $( "<h4>").text(value.title).hide().fadeIn(2000).appendTo(".container");
-            $( "<p class=\"test\">" ).text( value.published ).hide().fadeIn(2000).appendTo( ".container" );    
-           });
-           offset = offset + limit;   
-     });
-     offset = offset + limit;
+          $( "<h4>").text(value.title).hide().fadeIn(2000).appendTo(".container");
+          $( "<p class=\"test\">" ).text( value.published ).hide().fadeIn(2000).appendTo( ".container" );    
+         });
+         offset = offset + limit;   
+
   })
 
   .fail(function( xhr, status, errorThrown ) {
