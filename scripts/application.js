@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   var offset = 0;
-  var limit = 7;
+  var limit = 15;
 
   $(document).scroll( function() {
     if ($(window).scrollTop() + $(window).height() == $(document).height()) 
@@ -45,11 +45,8 @@ $(document).ready(function () {
 
   .done(function( json ) {
     $.each(json.news, function( index, value) {
-      $.each(json.news, function( index, value) {
             $( "<h4>").text(value.title).hide().fadeIn(2000).appendTo(".container");
-            $( "<p class=\"test\">" ).text( value.published ).hide().fadeIn(2000).appendTo( ".container" );    
-      });
-           offset = offset + limit;   
+            $( "<p class=\"test\">" ).text( value.published ).hide().fadeIn(2000).appendTo( ".container" );     
     });
      offset = offset + limit;
   })
